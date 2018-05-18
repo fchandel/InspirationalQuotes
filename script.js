@@ -17,7 +17,7 @@ function saveQuotes(quoteObj) {
 
 function loadQuote() {
     var s = document.createElement("script");
-    s.src = "http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40&_jsonp=saveQuotes";
+    s.src = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=40&_jsonp=saveQuotes";
     document.body.appendChild(s);
 } 
 
