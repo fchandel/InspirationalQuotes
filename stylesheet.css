@@ -1,0 +1,44 @@
+body {
+	background-color: black;
+	overflow-x: hidden;
+}
+
+.quote {
+	width: 50%;
+	margin: auto;
+	padding-top: 100px; 
+	color: white;
+	text-align: center;
+}
+.quote.hide {
+	display: none;
+}
+
+q {
+	font-size: 2.5vw;
+}
+
+#quoteAuthor {
+	font-size: 2.5vw;
+}
+
+#refreshLabel {
+	margin: auto;
+	display: none;
+}
+
+
+#refresh {
+	width: 100%;
+	padding-top: 30px;
+	bottom: 40px;
+	margin: auto;
+	color: white;
+	text-align: center;
+}
+
+#loading {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+}
