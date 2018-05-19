@@ -38,7 +38,6 @@ document.body.onkeyup = function(e){
 //and show quote
 
 window.onload = function() { 
-
 	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
     if (isMobile.matches) {
@@ -48,7 +47,7 @@ window.onload = function() {
   // 			document.getElementById("refreshLabel").style.display = "none";
 		// });
 		window.addEventListener("touchstart", tapHandler);
-
+		event.preventDefault();
 		var tapedTwice = false;
 
 		function tapHandler(event) {
