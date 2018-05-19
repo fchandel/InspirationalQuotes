@@ -1,5 +1,6 @@
 var quoteArray;
 
+//set new quote
 function refreshQuote() {
 	var post = quoteArray.shift();
 	console.log(quoteArray);
@@ -7,10 +8,12 @@ function refreshQuote() {
 	document.getElementById("quoteAuthor").innerHTML = post.title;
 }
 
+//save the quote objects we receive from api call to a global array to use.
+//.shift() is similar to pop()
+
 function saveQuotes(quoteObj) {
 	quoteArray = quoteObj;
 	var post = quoteArray.shift();
-	console.log(post.content);
 	document.getElementById("quoteBody").innerHTML = post.content;
 	document.getElementById("quoteAuthor").innerHTML = post.title;
 }
@@ -41,22 +44,20 @@ window.onload = function() {
 	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
     if (isMobile.matches) {
-        //Conditional script here
-  //       window.addEventListener('touchstart', function() {
-  // 			refreshQuote();
-  // 			document.getElementById("refreshLabel").style.display = "none";
-		// });
+
 		window.addEventListener("touchstart", tapHandler);
-		event.preventDefault();
+		//event.preventDefault();
 		var tapedTwice = false;
 
 		function tapHandler(event) {
+			event.preventDefault();
     		if(!tapedTwice) {
         	tapedTwice = true;
         	setTimeout( function() { tapedTwice = false; }, 300 );
         		return false;
     		}
     		event.preventDefault();
+
     		//action on double tap goes below
     		refreshQuote();
  		}
@@ -71,11 +72,3 @@ window.onload = function() {
 
 } 
 
-function isOverflown() {
-	var elementScrollHeight = document.getElementById("p").height;
-	var elementClientHeight = document.getElementById("quoteBody").style.height;
-
-    if (elementScrollHeight > elementClientHeight || elementScrollHeight > elementClientHeight) {
-    	document.getElementById("quoteBody").style.font-size == "10px";
-    }
-}
