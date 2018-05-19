@@ -42,3 +42,14 @@ q {
 	margin: auto;
 }
 
+#refreshLabelMobile {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #refreshLabelMobile {
+    	display: block;
+    }
+}
+
