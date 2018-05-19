@@ -47,7 +47,7 @@ window.onload = function() {
   // 			refreshQuote();
   // 			document.getElementById("refreshLabel").style.display = "none";
 		// });
-		document.getElementById("double-tap").addEventListener("touchstart", tapHandler);
+		window.addEventListener("touchstart", tapHandler);
 
 		var tapedTwice = false;
 
