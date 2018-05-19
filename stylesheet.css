@@ -41,6 +41,7 @@ q {
 #loading {
 	width: 100px;
 	height: 100px;
+	padding-top: 100px;
 	margin: auto;
 }
 
@@ -51,7 +52,7 @@ q {
 @media only screen and (max-width: 600px) {
 
     #refreshLabelMobile {
-    	display: block;
+    	display: none;
     }
 }
 
