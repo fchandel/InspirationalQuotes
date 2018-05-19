@@ -54,5 +54,13 @@ q {
     #refreshLabelMobile {
     	display: none;
     }
+
+    #loading {
+	width: 100px;
+	height: 100px;
+	padding-top: 50px;
+	margin: auto;
+}
+
 }
 
