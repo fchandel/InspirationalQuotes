@@ -4,7 +4,7 @@ body {
 }
 
 .quote {
-	width: 50%;
+	width: 80%;
 	margin: auto;
 	padding-top: 100px; 
 	color: white;
@@ -15,23 +15,25 @@ body {
 }
 
 q {
-	font-size: 2.5vw;
+	font-size: 30px;
 }
 
 #quoteAuthor {
-	font-size: 2.5vw;
+	background-color: red;
+	font-size: 18px;
 }
 
 #refreshLabel {
+	background-color: blue;
 	margin: auto;
 	display: none;
 }
 
 
 #refresh {
+	background-color: green;
 	width: 100%;
-	padding-top: 30px;
-	bottom: 40px;
+	padding-top: 100px;
 	margin: auto;
 	color: white;
 	text-align: center;
@@ -42,3 +44,4 @@ q {
 	height: 100px;
 	margin: auto;
 }
+

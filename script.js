@@ -27,9 +27,21 @@ document.body.onkeyup = function(e){
         refreshQuote();
     }
 }
+
 window.onload = function() { 
 	document.getElementById("loading").style.display = "none";
 	document.getElementById("refreshLabel").style.display = "block";
 	document.getElementById("quote").className = "quote";
 
 } 
+
+document.ready(function() {      
+    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+
+    if (isMobile.matches) {
+        //Conditional script here
+        window.addEventListener('touchstart', function() {
+  			refreshQuote();
+		});
+    }
+ });
