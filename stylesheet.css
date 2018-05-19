@@ -9,6 +9,7 @@ body {
 	padding-top: 100px; 
 	color: white;
 	text-align: center;
+	overflow-y: hidden;
 }
 .quote.hide {
 	display: none;
@@ -16,6 +17,7 @@ body {
 
 q {
 	font-size: 30px;
+	height: 300px;
 }
 
 #quoteAuthor {

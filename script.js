@@ -43,16 +43,40 @@ window.onload = function() {
 
     if (isMobile.matches) {
         //Conditional script here
-        window.addEventListener('touchstart', function() {
-  			refreshQuote();
-  			document.getElementById("refreshLabel").style.display = "none";
-		});
+  //       window.addEventListener('touchstart', function() {
+  // 			refreshQuote();
+  // 			document.getElementById("refreshLabel").style.display = "none";
+		// });
+		document.getElementById("double-tap").addEventListener("touchstart", tapHandler);
+
+		var tapedTwice = false;
+
+		function tapHandler(event) {
+    		if(!tapedTwice) {
+        	tapedTwice = true;
+        	setTimeout( function() { tapedTwice = false; }, 300 );
+        		return false;
+    		}
+    		event.preventDefault();
+    		//action on double tap goes below
+    		refreshQuote();
+ 		}
+
     } else {
 		document.getElementById("refreshLabel").style.display = "block";
     }
 
-    
+
 	document.getElementById("loading").style.display = "none";
 	document.getElementById("quote").className = "quote";
 
 } 
+
+function isOverflown() {
+	var elementScrollHeight = document.getElementById("p").height;
+	var elementClientHeight = document.getElementById("quoteBody").style.height;
+
+    if (elementScrollHeight > elementClientHeight || elementScrollHeight > elementClientHeight) {
+    	document.getElementById("quoteBody").style.font-size == "10px";
+    }
+}
