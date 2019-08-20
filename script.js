@@ -43,7 +43,7 @@ document.body.onkeyup = function(e){
 window.onload = function() { 
 	var isMobile = window.matchMedia("only screen and (max-width: 760px)");
 
-    if (isMobile.matches) {
+    	if (isMobile.matches) {
 
 		window.addEventListener("touchstart", tapHandler);
 		//event.preventDefault();
@@ -62,9 +62,9 @@ window.onload = function() {
     		refreshQuote();
  		}
 
-    } else {
+   	 } else {
 		document.getElementById("refreshLabel").style.display = "block";
-    }
+    	}
 
 
 	document.getElementById("loading").style.display = "none";
